@@ -1,0 +1,19 @@
+{
+  "name": "fullstack-react",
+  "version": "1.0.0",
+  "description": "Fullstack react app using Node, Express, React and MongoDB.",
+  "main": "index.js",
+  "engines": {
+    "node" : "10.11.0",
+    "npm" : "6.7.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Edgar Silva",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
