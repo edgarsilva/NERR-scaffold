@@ -7,8 +7,8 @@
 //   stripeSecretKey: process.env.STRIPE_SECRET_KEY
 // };
 module.exports = {
-  googleClientID: '243950915742-711fqgg6b3ubirr25tn5ibomtn5dd6ms.apps.googleusercontent.com',
-  googleClientSecret: 'XId4gf90o20_wxsZGNyxCRPf',
+  googleClientID: '437687360056-iamq2ee0e4a6d5ce9h5ccjtg96i7lq77.apps.googleusercontent.com',
+  googleClientSecret: 'VmAeiAVbpI0RXJwCYhcHYBWk',
   mongoURI: 'mongodb+srv://mongo-admin:emaily@emaily-dev-4pbkl.mongodb.net/test?retryWrites=true',
   cookieKey: 'akl;jqwpoignm,xc!@%^&*',
   stripePublishableKey: 'pk_test_ixy2rfF4fHh5NbptnWPJiZJ5',
