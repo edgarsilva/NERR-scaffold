@@ -9,6 +9,7 @@ module.exports = (app) => {
     '/auth/google/callback',
     passport.authenticate('google'),
     (req, res) => {
+      console.log("GOOGLE TOKEN ->", res);
       res.redirect('/surveys');
     }
   );
