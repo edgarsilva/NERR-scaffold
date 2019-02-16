@@ -1,34 +1,28 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-import { connect } from 'react-redux';
-import * as actions from '../actions';
+import logo from '../images/logo.svg';
+import '../css/App.css';
 
-// App  Components
-import Header from './Header';
-import Landing from './Landing';
-
-const Dashboard = () => <h2>Dashboard</h2>;
-const SurveyNew = () => <h2>SurveyNew</h2>;
-
-class App  extends Component {
-  componentDidMount() {
-    this.props.fetchUser();
-  }
-
+class App extends Component {
   render() {
     return (
-      <div className="container">
-        <BrowserRouter>
-          <div>
-            <Header></Header>
-            <Route exact path="/" component={Landing}></Route>
-            <Route exact path="/surveys" component={Dashboard}></Route>
-            <Route path="/surveys/new" component={SurveyNew}></Route>
-          </div>
-        </BrowserRouter>
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </header>
       </div>
     );
   }
 }
 
-export default connect(null, actions)(App);
+export default App;

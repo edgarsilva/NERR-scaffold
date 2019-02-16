@@ -1,7 +1,7 @@
 {
-  "name": "fullstack-react",
+  "name": "nerr-scaffold",
   "version": "1.0.0",
-  "description": "Fullstack react app using Node, Express, React and MongoDB.",
+  "description": "Scafoold App using Node, Express, React, Redux and Semantic-UI.",
   "main": "index.js",
   "engines": {
     "node": "10.11.0",
@@ -24,7 +24,6 @@
     "mongoose": "^5.4.12",
     "nodemon": "^1.18.10",
     "passport": "^0.4.0",
-    "passport-google-oauth20": "^1.0.0",
-    "stripe": "^6.25.1"
+    "passport-google-oauth20": "^1.0.0"
   }
 }

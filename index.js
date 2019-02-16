@@ -3,15 +3,21 @@ const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const bodyParser = require('body-parser');
+
+// Service and API keys setup
 const keys = require('./config/keys');
 
-// Require models
+// DB Setup
+// - Using Mongoose
+// - Require models
 require('./models/User');
+mongoose.connect(keys.mongoURI);
+
+// - Using Postgress and Bookshelf
+// - Require models
 
 // Require services
 require('./services/passport');
-
-mongoose.connect(keys.mongoURI);
 
 // Creating Express app.
 const app = express();
@@ -23,7 +29,7 @@ app.use(bodyParser.json());
 // -  Setting up session with cookies
 app.use(
   cookieSession({
-    maxAge: 30 * 24 * 60 * 60* 1000,
+    maxAge: 7 * 24 * 60 * 60* 1000,
     keys: [keys.cookieKey]
   })
 );
@@ -34,8 +40,8 @@ app.use(passport.session());
 
 // Setting up Routes
 require('./routes/authRoutes')(app);
-require('./routes/billingRoutes')(app);
 
+// Set up app serving in prod mode
 if (process.env.NODE_ENV === 'production') {
   // Express will serve up production assets
   // like main.js and main.css files!
